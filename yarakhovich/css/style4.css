@@ -3,9 +3,6 @@ body {
   font-size: 16px;
 }
 
-main {
-}
-
 h1,
 h2,
 h3 {
@@ -71,7 +68,7 @@ fieldset {
 }
 
 .main_form {
-    margin-bottom: 160px;
+  margin-bottom: 160px;
 }
 
 /* Блок 1: Имя */
@@ -84,6 +81,7 @@ fieldset {
   border-radius: 0;
   /* Дополнительно для Safari/iOS: */
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .block_name_title {
@@ -209,24 +207,115 @@ fieldset {
 }
 
 .block_submit {
-    margin-left: 42px;
+  margin-left: 42px;
 }
 
 .block_submit button {
-    border: 1px #A6A6A6 solid;
-    background-color: #F0F0F0;
-    padding: 3px 36px 5px 36px;
-    line-height: 1;
-    font-size: 15px;
-    margin-bottom: 6px;
+  border: 1px #a6a6a6 solid;
+  background-color: #f0f0f0;
+  padding: 3px 36px 5px 36px;
+  line-height: 1;
+  font-size: 15px;
+  margin-bottom: 6px;
 }
 
 .block_submit p {
-    font-size: 11px;
-    letter-spacing: 0.8px;
-    color: #777777;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  color: #777777;
 }
 
 .block_submit p a {
-    color: #1d3d65;
+  color: #1d3d65;
+}
+
+/* --- АДАПТИВНОСТЬ МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (< 480px) --- */
+@media (max-width: 479px) {
+  main {
+    padding: 10px;
+  }
+
+  .main_form {
+    margin-bottom: 0px;
+  }
+
+  /* Адаптив описания ВКонтакте (иконка + текст) */
+  .block_description {
+    /* Меняем направление на column */
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: justify;
+  }
+
+  .block_description_img img {
+    /* Убираем сдвиг иконки сверху */
+    margin-top: 0;
+  }
+
+  /* Переводим строки блока "Имя" в одну колонку */
+  .block_name div {
+    /* Переключаем на одну колонку */
+    grid-template-columns: 1fr;
+    /* Уменьшаем отступы по вертикали */
+    gap: 4px 0;
+  }
+
+  /* Переводим строки блока "Образование" в одну колонку */
+  .block_aducation_country,
+  .block_aducation_city,
+  .block_school_menu,
+  .block_university_menu {
+    grid-template-columns: 1fr; /* Переключаем на одну колонку */
+    gap: 4px 0;
+    margin-bottom: 15px; /* Выравниваем шаг между полями */
+  }
+
+  /* Выравнивание подсказок (label) */
+  .block_name label,
+  .block_aducation label {
+    /* Текст подсказки слева */
+    text-align: left;
+    font-size: 14px;
+  }
+
+  /* Сбрасываем привязку ко второй колонке для подсказки (тег p) */
+  .block_aducation_city_note {
+    grid-column: 1;
+    margin-top: 2px;
+  }
+
+  /* Растягиваем поля ввода и селекты на всю ширину экрана */
+  .block_name input,
+  .block_aducation select {
+    width: 100%; /* Поля займут всю ширину экрана смартфона */
+    max-width: 100%;
+    height: 32px; /* На смартфонах по полям пальцем легче попадать, если они чуть выше */
+  }
+
+  /* Блок с кнопкой */
+  .block_submit {
+    margin-left: 0; /* Убираем левый отступ, выравниваем по краю */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .block_submit button {
+    width: 100%;
+    /* Увеличиваем высоту кнопки */
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .block_submit p {
+    text-align: justify;
+  }
+
+  .block_aducation .block_name_subtitle,
+  .block_name_title_name,
+  .block_name_title_aducation {
+    margin-bottom: 5px;
+  }
 }
