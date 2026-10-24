@@ -267,9 +267,11 @@ fieldset {
   .block_aducation_city,
   .block_school_menu,
   .block_university_menu {
-    grid-template-columns: 1fr; /* Переключаем на одну колонку */
+    /* Переключаем на одну колонку */
+    grid-template-columns: 1fr;
     gap: 4px 0;
-    margin-bottom: 15px; /* Выравниваем шаг между полями */
+    /* Выравниваем шаг между полями */
+    margin-bottom: 15px;
   }
 
   /* Выравнивание подсказок (label) */
@@ -289,14 +291,20 @@ fieldset {
   /* Растягиваем поля ввода и селекты на всю ширину экрана */
   .block_name input,
   .block_aducation select {
-    width: 100%; /* Поля займут всю ширину экрана смартфона */
+    width: 100%;
     max-width: 100%;
-    height: 32px; /* На смартфонах по полям пальцем легче попадать, если они чуть выше */
+    height: 32px;
+  }
+
+  .block_aducation .block_name_subtitle,
+  .block_name_title_name,
+  .block_name_title_aducation {
+    margin-bottom: 5px;
   }
 
   /* Блок с кнопкой */
   .block_submit {
-    margin-left: 0; /* Убираем левый отступ, выравниваем по краю */
+    margin-left: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -311,11 +319,5 @@ fieldset {
 
   .block_submit p {
     text-align: justify;
-  }
-
-  .block_aducation .block_name_subtitle,
-  .block_name_title_name,
-  .block_name_title_aducation {
-    margin-bottom: 5px;
   }
 }
