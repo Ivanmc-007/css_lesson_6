@@ -11,11 +11,11 @@ h3 {
 
 h2,
 h3 {
-  color: #58729a;
+  color: #587399;
 }
 
 h1 {
-  color: #1d3d65;
+  color: #2b587a;
   font-weight: 400;
   font-size: 22px;
   padding-top: 10px;
@@ -71,6 +71,10 @@ fieldset {
   margin-bottom: 160px;
 }
 
+.main_form label {
+  color: #6b6d73;
+}
+
 /* Блок 1: Имя */
 .main_form legend {
   color: #58729a;
@@ -92,11 +96,11 @@ fieldset {
 }
 
 .block_name_title_name {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .block_name {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .block_name div {
@@ -111,12 +115,14 @@ fieldset {
   /* Отступы между колонками */
   gap: 8px 10px;
   /* Отступы между строками */
-  padding-bottom: 11px;
+  padding-bottom: 10px;
 }
 
 /* Выравниваем текст подписей по правому краю */
 .block_name label {
   text-align: right;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .block_name input {
@@ -126,6 +132,7 @@ fieldset {
   box-sizing: border-box;
   height: 25px;
   border: 1px #777777 solid;
+  font-size: 12px;
 }
 
 /* Оформляем подсказки*/
@@ -133,15 +140,17 @@ fieldset {
   color: #777777;
   font-size: 11px;
   letter-spacing: 0.8px;
+  margin-left: 2px;
+  margin-top: 2px;
 }
 
 .block_name_title_aducation {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .block_aducation {
   display: grid;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .block_aducation_country {
@@ -149,17 +158,38 @@ fieldset {
   grid-template-columns: 75px auto;
   gap: 0 10px;
   margin-bottom: 11px;
+  align-items: center;
+}
+
+.block_aducation_country label {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.block_aducation_country select {
+  font-size: 14px;
+  letter-spacing: 0.4px;
 }
 
 .block_aducation_city {
   display: grid;
   grid-template-columns: 75px auto;
   gap: 0 10px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
+  align-items: center;
+}
+
+.block_aducation_city label {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: -4px;
 }
 
 .block_aducation_city select {
   margin-bottom: 2px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  margin-bottom: 3px;
 }
 
 .block_aducation_city_note {
@@ -167,6 +197,7 @@ fieldset {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.8px;
+  color: #6b6d73;
 }
 
 .block_aducation select {
@@ -174,7 +205,7 @@ fieldset {
   box-sizing: border-box;
   height: 25px;
   border: 1px #777777 solid;
-  letter-spacing: -0.6px;
+  /* letter-spacing: -0.6px; */
 }
 
 .block_aducation label {
@@ -197,6 +228,17 @@ fieldset {
   grid-template-columns: 75px auto;
   gap: 0 10px;
   margin-bottom: 25px;
+  align-items: center;
+}
+
+.block_school_menu label {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.block_school_menu select {
+  font-size: 14px;
+  letter-spacing: 0.3px;
 }
 
 .block_university_menu {
@@ -204,6 +246,17 @@ fieldset {
   grid-template-columns: 75px auto;
   gap: 0 10px;
   margin-bottom: 25px;
+  align-items: center;
+}
+
+.block_university_menu label {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+.block_university_menu select {
+  font-size: 14px;
+  letter-spacing: 0.3px;
 }
 
 .block_submit {
@@ -211,9 +264,9 @@ fieldset {
 }
 
 .block_submit button {
-  border: 1px #a6a6a6 solid;
+  border: 2px #a6a6a6 solid;
   background-color: #f0f0f0;
-  padding: 3px 36px 5px 36px;
+  padding: 3px 36px 3px 36px;
   line-height: 1;
   font-size: 15px;
   margin-bottom: 6px;
